@@ -2,9 +2,14 @@
   "name": "node-ts-starter",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/app.js",
+  "bin": {
+    "mng": "./dist/app.js"
+  },
   "scripts": {
-    "start": "ts-node ./src/app.ts"
+    "start": "ts-node ./src/app.ts",
+    "build": "tsc",
+    "dev": "tsc && node ./dist/app.js"
   },
   "keywords": [],
   "author": "",
@@ -12,5 +17,10 @@
   "devDependencies": {
     "ts-node": "^10.9.2",
     "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "commander": "^12.1.0",
+    "dotenv": "^16.4.5",
+    "mongoose": "^8.4.0"
   }
 }
